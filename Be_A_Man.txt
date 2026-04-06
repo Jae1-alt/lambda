@@ -1,0 +1,41 @@
+3) Be a Man Submission Checklist (One Page)
+
+Give them one generic checklist to attach to each submission:
+
+✅ Student Submission Checklist
+
+Architecture:
+
+ All required services used: Lambda, EventBridge, Aurora, SNS/SQS (as specified in lab).
+ Terraform can terraform apply without manual console changes.
+ AWS resources are named with app + env (e.g., lab2-orders-dev).
+
+Lambda:
+
+ Lambda code is in version control (Git repo link submitted).
+ Environment variables configured via Terraform (no secrets hard-coded).
+ Lambda handlers are idempotent (safe to re-run events).
+
+Aurora:
+
+ Aurora cluster deployed via Terraform (no manual RDS wizard).
+ Schema created via script or migration file (SQL file included).
+ Connections closed properly (no runaway connection leak).
+
+Messaging:
+
+ SQS queues have DLQs configured where appropriate.
+ SNS topics have at least one functional subscription tested.
+ EventBridge rules have event patterns documented in README.
+
+Testing:
+
+ At least 5 test events executed per lab.
+ Screenshots or logs included showing end-to-end flow.
+ Failure path tested (bad messages, invalid input).
+
+Docs:
+
+ README.md explains architecture and how to run tests.
+ Simple text diagram included.
+ Known limitations listed.
