@@ -1,0 +1,42 @@
+2) Lab Goals (What “Good” Looks Like)
+
+You don’t need line-by-line keys; you need architecture + behavior.
+
+Lab 1 – Event-Driven Image Processor
+    Architecture:
+        S3 ObjectCreated:* → Lambda (metadata + EventBridge)
+        EventBridge routes a “IMAGE_PROCESSED” event to a logging Lambda
+        Logging Lambda writes to Aurora (image key, size, user, timestamp)
+        SNS sends user/admin success notification
+    Lab correctness signals:
+        Lambda idempotent (can process same S3 event twice without duplicate DB entries)
+        Aurora writes use parameterized queries or Data API
+        SNS topic subscription works (test via email)
+
+Lab 2 – Serverless Order System
+    Architecture:
+        API Gateway REST/HTTP → Lambda (validation, enrichment) → SQS
+        Worker Lambda pulls from SQS, writes to Aurora orders table
+    Lab correctness signals:
+        Orders with invalid fields are rejected at API layer
+        SQS DLQ configured and demonstrably catches poison messages
+        Aurora schema supports indexing by order_id / customer_id
+
+Lab 3 – Real-Time Inventory
+    S3 CSV → Lambda → Aurora update → SNS notify
+    Correct CSV parsing, graceful handling of bad lines, transactional upserts.
+
+Lab 4 – Event Stream Router
+    3+ EventBridge rules with different patterns (e.g. source/type/region)
+    Each pattern routes to different Lambda/SQS/SNS targets
+    DLQ configured at bus or target level
+
+Lab 5 – Aurora AI Query Bot
+    API → Lambda → Bedrock (or GPT) → safe SQL → Aurora
+    SQL constrained to a limited set of templates (no arbitrary SQL)
+    Queries logged (for auditing)
+
+Labs 6–10 follow same style: you just check that:
+    Required services are present
+    Error paths are handled
+    Scaling/throughput or failover behavior is demonstrated (for 9 & 10)
