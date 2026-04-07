@@ -4,3 +4,12 @@ YOU!! must add AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and optionally AWS_SESS
 This pipeline:
     checks format on all Terraform,
     runs init + validate + plan for Lab 1 and Lab 2 folders.
+
+
+Requirements: 
+
+        Create a new GitHub repo
+        Make folders lab1_image_processor and lab1_image_processor
+        Git Push If you did this from your computer
+        Use terraform.yml for the Github Actions Pipeline
+        Watch the pipeline run and break things 🙂
