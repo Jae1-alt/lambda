@@ -23,8 +23,6 @@ Configuration
 1. Choose Author from Scratch
 Function name: chewbacca-python-lambda
 
-Go here for code: https://github.com/BalericaAI/lambda/blob/main/lessonb/lambda/handler.py
-
 2. Runtime
 Select: Python 3.x (latest available)
 
@@ -32,6 +30,53 @@ Select: Python 3.x (latest available)
 Choose: Create a new role with basic Lambda permissions
 
 Note: This gives permission to write logs to CloudWatch. Without this, you are blind.
+
+
+✍️ Task 2 — Add Python Code
+
+Replace default code with: https://github.com/BalericaAI/lambda/blob/main/lessonb/lambda/handler.py
+
+💾 Click Deploy
+
+👉 NOTE:  “If you don’t deploy, nothing changed. AWS is not psychic. This is why Keisha fails”
+
+▶️ Task 3 — Test Python Lambda
+Click Test
+        Create new test event:
+        Name: test-python
+
+Use this JSON:
+
+        {
+          "queryStringParameters": {
+            "name": "Chewbacca"
+          }
+        }
+        
+✅ Expected Result
+    Status: Succeeded
+    Output contains:
+            "Hello Chewbacca from Python!"
+            timestamp
+
+🔍 Task 4 — Verify Python Logs
+Navigate:
+Monitor tab → View CloudWatch Logs
+
+You must find:
+Log group: /aws/lambda/chewbacca-python-lambda
+
+⚙️ Task 5 — Create Node.js Lambda
+
+Repeat same process.
+
+🛠️ Configuration
+Function name: chewbacca-node-lambda
+Runtime:  Node.js (latest LTS)
+Permissions: Create new role (basic Lambda)
+
+✍️ Task 6 — Add Node.js Code 
+
 
 
 
