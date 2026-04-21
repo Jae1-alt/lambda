@@ -30,9 +30,11 @@ AWS Console → WAF & Shield
 Click Create Web ACL
 
 🛠️ Configuration
-Name: chewbacca-api-waf
-Resource Type:: Regional resources
-Region: 👉 Same region as your API Gateway
+
+        Name: chewbacca-api-waf
+        Resource Type:: Regional resources
+        Region: 👉 Same region as your API Gateway
+
 Associated Resource:
 Select: API Gateway
 Choose your API
