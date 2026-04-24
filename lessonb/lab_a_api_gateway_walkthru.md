@@ -22,15 +22,9 @@ Key ideas:
 AWS Console → API Gateway
 Click: Create API
 
-Choose👉 HTTP API (NOT REST API)
+Choose👉 Rest API 
 
-Why? Because it's....
-    Cheaper
-    Faster
-    Less configuration
-    Production-viable
-
-Click: Build (HTTP API)
+Click: Build (REST API)
 
 🔗 Task 2 — Add Integrations
 
