@@ -12,24 +12,21 @@ Unlike HTTP API, REST API makes you define:
     Deployment → publish changes
 
 Task 1 — Create REST API
-📍 Navigation
-AWS Console → API Gateway
-Click Create API ---> REST API (NOT HTTP API)
-
-Endpoint Type: Regional
-Name: chewbacca-rest-api
+    📍 Navigation
+    AWS Console → API Gateway
+    Click Create API ---> REST API (NOT HTTP API)
+    Endpoint Type: Regional
+    Name: chewbacca-rest-api
 
 Task 2 — Create Resources (Paths)
-
-Create /python
-    Click Actions → Create Resource
-    Resource Name: python
-    Resource Path: /python
-
-Create /node
-Same process:
-    Resource Name: node
-    Path: /node
+    Create /python
+        Click Actions → Create Resource
+        Resource Name: python
+        Resource Path: /python
+    Create /node
+    Same process:
+        Resource Name: node
+        Path: /node
 
 Task 3 — Create Methods
 
