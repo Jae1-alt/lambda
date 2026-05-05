@@ -12,6 +12,9 @@ It handles:
     Token generation (JWTs) for APIs
 
 
+https://aws.amazon.com/pm/cognito/?trk=36e1404e-1051-48b6-9dd0-51db40b9c756&sc_channel=ps&ef_id=CjwKCAjwqubPBhBOEiwAzgZX2nhsEiOHEJQVaqlAYrksnh6lOFWjvE4VxyRyQ3izPOoltgjOxDh6mBoCOngQAvD_BwE:G:s&s_kwcid=AL!4422!3!795794010901!p!!g!!cognito!23527793912!187898877050&gad_campaignid=23527793912&gbraid=0AAAAADjHtp8JXL4yKgorV0cpJGxLu-Nuy&gclid=CjwKCAjwqubPBhBOEiwAzgZX2nhsEiOHEJQVaqlAYrksnh6lOFWjvE4VxyRyQ3izPOoltgjOxDh6mBoCOngQAvD_BwE
+
+
 
 Purpose of Cognito in This Lab
 
