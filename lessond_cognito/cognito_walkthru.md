@@ -164,8 +164,10 @@ Actions → Deploy API → prod
 Task 8 — Test
 
 Without Token ---> curl https://<api>/prod/python  --> 401 Unauthorized
-With Token -->  curl https://<api>/prod/python \
-  -H "Authorization: <ACCESS_TOKEN>" 
+With Token -->  
+
+        curl https://<api>/prod/python \
+          -H "Authorization: <ACCESS_TOKEN>" 
 
 → 200 OK
 
