@@ -71,7 +71,8 @@ Create one:
 Name: chewbacca-client
 
 Disable: ----> ❌ Client secret
-“Client secret complicates API usage. We keep it simple.”
+
+Why? Client secret complicates API usage. We keep it simple.
 
 Click Create
 
