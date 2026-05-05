@@ -51,7 +51,41 @@ Set: Required MFA
         ✔ SMS
         ✔ TOTP (Authenticator app)
 
+4. User Account Recovery
 
+        Enable:
+        ✔ Email
+        ✔ Phone
 
+5. Attributes
 
+Set required:
 
+        ✔ email
+        ✔ phone_number
+
+6. App Client
+
+Create one:
+
+Name: chewbacca-client
+
+Disable: ----> ❌ Client secret
+“Client secret complicates API usage. We keep it simple.”
+
+Click Create
+
+Task 2 — Create a User
+
+Inside User Pool:
+
+        Go to Users
+        Click Create user
+
+Fill:
+        Username: lizzo1
+        Email: student1@lizzo.com
+        Phone: +1XXXXXXXXXX
+
+Set password manually: --->  Permanent password
+“We are skipping email verification to move faster. We will return to it later"
