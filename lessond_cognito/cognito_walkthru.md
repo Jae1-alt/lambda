@@ -154,7 +154,8 @@ Configure:
 Task 6 — Attach Authorizer to Methods
 
 For /python and For /node:
-Method Request --> Authorization: Cognito Authorizer
+
+    Method Request --> Authorization: Cognito Authorizer
  
 Task 7 — Deploy API (Again!)
 
