@@ -33,3 +33,26 @@ Updated System Flow: Client → WAF → API Gateway (Cognito Auth) → Lambda �
 
 NOTE!!!!---> If authentication fails, Lambda is never executed
 
+Why you Want to Use Cognito
+
+Because in the real world:
+
+        Unlike Keisha, APIs are never open
+        Loyal Systems must know:
+            who is calling
+            what they are allowed to do
+        Security is not optional—it’s foundational
+
+Without Cognito:
+
+        Any Pookie can hit your Keisha API. 
+        No accountability, just welfare
+        No identity context, who knows who was there? Who's the daddy?
+
+With Cognito:
+        Every request has an identity
+        Think of this like, no ring---> No hit.
+        Access can be controlled
+        Behavior can be customized per user
+
+
