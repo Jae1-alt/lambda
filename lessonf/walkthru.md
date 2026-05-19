@@ -53,7 +53,26 @@ modify your get_token.py
 Phase 3 — Mark Token Used
 
 When Lambda receives valid request: Update DynamoDB:
-Lambda: update.py
+Update your previous Lambda with this: https://github.com/BalericaAI/lambda/blob/main/lessonf/lambda/update_token.py
+
+If you want to play with headers then.... Pass token_id as header: -H "x-token-id: abc123"
+
+Phase 4 — Create Detection Lambda
+
+Lambda Name: unused-token-detector
+
+Purpose
+
+Find tokens:
+
+        used = false
+        AND
+        older than 10 minutes
+
+
+
+
+
 
 
 
