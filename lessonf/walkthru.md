@@ -75,15 +75,16 @@ detection.py  Here: https://github.com/BalericaAI/lambda/blob/main/lessonf/lambd
 Phase 5 — EventBridge Schedule
 
 Navigation
+        
         EventBridge
         Rules
         Create Rule
 
 
-Name: unused-token-check
-Rule Type: Schedule
-Schedule: rate(5 minutes
-Target: unused-token-detector Lambda
+        Name: unused-token-check
+        Rule Type: Schedule
+        Schedule: rate(5 minutes
+        Target: unused-token-detector Lambda
 
 Is this fun? Say "Lizzo Luvs Me" If this is fun for you!!!
 
