@@ -49,6 +49,8 @@ Bedrock Prompt
     2. Possible explanations
     3. Recommended analyst actions
     4. Short executive summary
+    %. Recommended remediations, with explanation
+    6. Please provide possible code snippets and walkthrus for number
 
 Example Output
 
