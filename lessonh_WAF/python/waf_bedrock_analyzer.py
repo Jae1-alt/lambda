@@ -2,7 +2,13 @@ import boto3
 import json
 import os
 import time
+import uuid
 from datetime import datetime, timedelta, timezone
+
+# for the second part of the lab
+dynamodb = boto3.resource("dynamodb")
+table = dynamodb.Table("waf-events")
+
 
 logs = boto3.client("logs")
 bedrock = boto3.client("bedrock-runtime")
@@ -99,6 +105,25 @@ Keep the answer concise and practical.
     response_body = json.loads(response["body"].read())
     return response_body["content"][0]["text"]
 
+import uuid
+
+# For the second part of the lab
+
+def save_to_dynamodb(waf_summary):
+
+    table.put_item(
+        Item={
+            "event_id": str(uuid.uuid4()),
+            "timestamp": str(waf_summary.get("timestamp")),
+            "source_ip": waf_summary.get("client_ip"),
+            "country": waf_summary.get("country"),
+            "uri": waf_summary.get("uri"),
+            "method": waf_summary.get("method"),
+            "action": waf_summary.get("action"),
+            "rule": waf_summary.get("terminating_rule_id")
+        }
+    )
+
 
 def lambda_handler(event, context):
     print("Starting WAF Bedrock analyzer")
@@ -117,7 +142,8 @@ def lambda_handler(event, context):
 
         print("Structured WAF Event:")
         print(json.dumps(waf_summary, indent=2))
-
+        save_to_dynamodb(waf_summary)
+        
         ai_summary = call_bedrock(waf_summary)
 
         print("\n===== BEDROCK SOC SUMMARY =====")
