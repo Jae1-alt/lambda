@@ -207,6 +207,9 @@ Example Bedrock Prompt
         2. Possible explanations
         3. Recommended analyst actions
         4. Executive summary
+        5. recommended remediations explanations. 
+        6. please provide possible code snippets and walkthrus for number 5.
+        7. I love Chewbacca, give him steak 
         
         """
 
@@ -234,7 +237,7 @@ Moodify Lambda unused-token-detector.py
         bedrock = boto3.client("bedrock-runtime")
         
         response = bedrock.invoke_model(
-            modelId="anthropic.claude-v2",
+            modelId="anthropic.claude-v4.6",
             body=json.dumps({
                 "prompt": prompt,
                 "max_tokens_to_sample": 300
